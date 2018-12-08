@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>Blog AMCC</title>
+<style type="text/css">
+		label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
+		.labelfrm {
+			display:block;
+			font-size:small;
+			margin-top:5px;
+		}
+		</style>
+
+<script type="text/javascript" src="asset/js/jquery.min.js"></script>
+<script type="text/javascript" src="asset/js/jquery.validate.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	//search_kota();
+	validasi_form();
+	
+});
+
+function validasi_form(){
+			$('#form_tambah').validate({
+				rules: {
+					email: {
+						email: true
+					}
+					
+				},
+				messages: {
+					name: {
+						required: "Kolom Nama harus diisi"
+						
+					},
+					email: {
+						required: "Alamat email harus diisi",
+						email: "Format email tidak valid"
+					}
+				}
+			});
+}
+</script>
+<link href="asset/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="satu">
+    <div id="satu_con">
+        <div id="satu_a">
+            <span class="satu_aa">Selemat Datang Administrator</span>
+            <span class="satu_ab">Blog ku</span>
+        </div>
+        <div id="satu_b">
+            <ul>
+                <li><a href="#" class="pilih">Home</a></li>
+                <li><a href="#">Entri Data</a>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="dua">
+    <div id="dua_con">
+        <div id="dua_a">
+            <div id="dua_aa">
+                <span id="dua_aab">Tambah Data Pelayanan</span>
+                <span id="dua_aaa">
+                	<input type="button" value="Kembali" class="tambah">
+                </span>
+            </div>
+            <div id="dua_ab">
+			<form id="form_tambah" name="form_tambah" method="post">
+                 <ul>
+                    <li>
+                        <label>Name</label>
+                        <input type="text" name="name" id="name" class="required" maxlength="40">
+                    </li>
+                    <li>
+                        <label>Email</label>
+                        <input type="text" name="email"  id="email" class="required" maxlength="100">
+                    </li>
+                    <li>
+                        <label>Message</label>
+                        <textarea name="message" id="message" rows="5" cols="45" class="required"></textarea>
+                    </li>
+                    <li>
+                        <label>&nbsp;</label>
+                        <input type="submit" value="Submit" class="submit">
+                    </li>
+                </ul>	
+				</form>	
+            </div>
+        </div>
+        <div id="dua_b">
+        	<div id="kotak">
+            	<div id="kotak_a">Member Card</div>
+                <div id="kotak_b"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

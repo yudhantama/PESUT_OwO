@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Web Company Profile</title>
+<link href="asset/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="satu">
+    <div id="satu_con">
+        <div id="satu_a">
+            <span class="satu_aa">Selemat Datang Administrator</span>
+            <span class="satu_ab">Creative & Innovative</span>
+        </div>
+        <div id="satu_b">
+            <ul>
+                <li><a href="#" class="pilih">Home</a></li>
+                <li><a href="#">Entri Data</a>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="dua">
+    <div id="dua_con">
+        <div id="dua_a">
+            <div id="dua_aa">
+                <span id="dua_aab">Data Biodata</span>
+                <!--<span id="dua_aaa">
+                	<input type="button" value="Tambah Data" class="tambah">
+                </span>
+                -->
+            </div>
+            <div id="dua_ac">
+                
+            </div>
+            <div id="dua_ab">
+                <?php
+                    $_GET[page] == "";
+                    
+                    if ($_GET[page] == "")
+                        {
+                            include ("tampil.php");
+                        }
+                    else
+                        {
+                            include ($_GET[page]".php");
+                        }
+                    
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
